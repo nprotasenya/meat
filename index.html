@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SWAGER'S SHOP — Farm meat &amp; deli</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Podkova:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__brand">
+        <img class="site-header__logo-img" src="./assets/img/brand/logo.jpg" alt="SWAGER'S SHOP">
+        <span class="site-header__logo">SWAGER'S SHOP</span>
+      </div>
+      <button id="open-cart" class="cart-toggle" aria-haspopup="dialog">
+        Кошик
+        <span id="cart-count" class="cart-toggle__badge">0</span>
+      </button>
+    </div>
+  </header>
+  <div class="browser-wide-img">
+    <img src="/assets/img/hero-head.png"/>
+  </div>
+  <main class="container">
+    
+    <section class="hero">
+      <p class="hero-time">Farm meat &amp; deli — est. 2026.</p>
+      <h1>Крафтові копченості &amp; справжній Low and Slow BBQ</h1>
+      <h2>Ми не просто готуємо м'ясо — ми творимо ритуал.</h2>
+      <h2>Кожен шматок проходить через дим, час і майстерність.</h2>
+    </section>
+
+    <section id="product-list" aria-live="polite">
+      <!-- рендериться JS-ом, згруповано за категоріями -->
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>© 2026 SWAGER'S SHOP — Farm meat &amp; deli</p>
+    <div>
+      <img class="footer-stamp" src="./assets/img/brand/Stamp.png"/>
+    </div>
+  </footer>
+
+  <!-- Модалка корзини -->
+  <div id="cart-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+    <div class="modal__panel">
+      <button id="close-cart" class="modal__close" aria-label="Закрити">✕</button>
+
+      <div id="cart-state-default" class="modal__state is-visible">
+        <h2 id="cart-title" class="modal__title">Ваш кошик</h2>
+
+        <div id="cart-items" class="cart-items"></div>
+
+        <div class="cart-summary">
+          <span>Разом:</span>
+          <strong id="cart-total">0 грн</strong>
+        </div>
+
+        <form id="order-form" class="order-form">
+          <input class="order-fhttp://localhost:3000orm__input" type="text" name="name" placeholder="Ваше імʼя" required>
+          <input class="order-form__input" type="tel" name="phone" placeholder="Телефон для звʼязку" required>
+          <textarea class="order-form__input" name="comment" placeholder="Коментар (необовʼязково)" rows="2"></textarea>
+          <button id="submit-order" type="submit" class="btn btn--primary btn--block" disabled>
+            Надіслати замовлення
+          </button>
+        </form>
+      </div>
+
+      <div id="cart-state-thanks" class="modal__state modal__state--thanks">
+        <h2 class="modal__title">Дякуємо!</h2>
+        <p>Ваше замовлення прийнято. Менеджер звʼяжеться з вами найближчим часом.</p>
+        <button id="thanks-close" class="btn btn--primary" onclick="document.getElementById('cart-modal').classList.remove('is-open')">
+          Гаразд
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

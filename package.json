@@ -1,0 +1,10 @@
+{
+  "name": "whatsapp-order-service",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Ізольований мікросервіс розсилки замовлень у WhatsApp. Деплоїться окремим Vercel-проєктом.",
+  "engines": {
+    "node": ">=18"
+  }
+}

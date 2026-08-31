@@ -1,0 +1,12 @@
+[
+  { "id": "pork-knuckle", "category": "Свинина", "name": "Рулька BBQ", "price": 59, "unit": "100 г", "image": "./assets/img/products/pork-knuckle.jpg", "description": "Соковита, ароматна, з хрумкою шкіркою. Окрема гастрономічна подія." },
+
+  { "id": "lamb-rack", "category": "Баранина", "name": "Сідло барана", "price": 89, "unit": "100 г", "image": "./assets/img/products/lamb-rack.jpg", "description": "Преміальний відруб. Ніжна вирізка вздовж хребта — вершина ягнячого BBQ." },
+
+  { "id": "chicken-wings", "category": "Птиця", "name": "Крила курячі BBQ", "price": 39, "unit": "100 г", "image": "./assets/img/products/chicken-wings.jpg", "description": "Chicken wings з димком — хрусткі крила, ідеальний снек до пива." },
+
+  { "id": "fish-dorado", "category": "Риба", "name": "Дорада / Сібас г/к", "price": 69, "unit": "100 г", "image": "./assets/img/products/fish-dorado.jpg", "description": "Середземноморська класика у димному виконанні." },
+  { "id": "fish-carp", "category": "Риба", "name": "Товстолоб або Карп", "price": 39, "unit": "100 г", "image": "./assets/img/products/fish-carp.jpg", "description": "Копчений товстолоб або карп у сільському стилі — великі шматки, природний дим." }
+
+  
+]
