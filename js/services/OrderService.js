@@ -9,7 +9,7 @@ export class OrderService {
    * @param {string} apiUrl - адреса мікросервісу розсилки
    * @param {typeof fetch} httpClient - інʼєкція fetch, щоб легко мокати в тестах
    */
-  constructor(apiUrl, httpClient = fetch) {
+  constructor(apiUrl, httpClient = globalThis.fetch.bind(globalThis)) {
     this.apiUrl = apiUrl;
     this.httpClient = httpClient;
   }
