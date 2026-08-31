@@ -19,7 +19,9 @@ export class WhapiProvider extends WhatsAppProvider {
   }
 
   async sendMessage(toPhone, text) {
-    const to = toPhone.replace(/\D/g, '');
+    // Отримувач — або номер телефону, або готовий ID чату/групи (напр. 1203...@g.us).
+    // Номер чистимо від форматування, JID лишаємо як є.
+    const to = toPhone.includes('@') ? toPhone.trim() : toPhone.replace(/[^0-9]/g, '');
 
     const response = await fetch(this.#endpoint, {
       method: 'POST',
