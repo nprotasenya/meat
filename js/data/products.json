@@ -13,10 +13,10 @@
   
   { "id": "lamb-leg-young", "category": "Баранина", "name": "Нога ягняти", "price": 79, "unit": "100 г", "image": "./assets/img/products/lamb-leg-young.jpg", "description": "Ніжне, делікатесне м'ясо. Копчення на вишні та яблуні." },
   { "id": "lamb-leg-adult", "category": "Баранина", "name": "Нога барана", "price": 79, "unit": "100 г", "image": "./assets/img/products/lamb-leg-adult.jpg", "description": "Більш насичений смак, більше м'яса. Для справжніх поціновувачів." },
-
-  { "id": "beef-pulled", "category": "Special", "name": "Рвана яловичина", "tags": ["weekend"], "price": 77, "unit": "100 г", "image": "./assets/img/products/beef-pulled.jpg", "description": "Томлена лопатка — pulled beef, розібране на волокна після багатогодинного копчення." },
-  { "id": "pork-pulled", "category": "Special", "name": "Лопатка / Рвана свинина", "tags": ["weekend"], "price": 69, "unit": "100 г", "image": "./assets/img/products/pork-pulled.jpg", "description": "Свинний бріскет або pulled pork — томиться годинами, розбирається руками." },
-  { "id": "pork-belly", "category": "Special", "name": "Шпондер (підчеревина) BBQ", "price": 59, "unit": "100 г", "image": "./assets/img/products/pork-belly.jpg", "description": "Pork belly у всій красі. Жирна прошарована підчеревина, закопчена до золотистої скоринки." },
+  
+  { "id": "beef-pulled", "category": "SWAGER's Special", "name": "Рвана яловичина", "tags": ["weekend"], "price": 77, "unit": "100 г", "image": "./assets/img/products/beef-pulled.jpg", "description": "Томлена лопатка — pulled beef, розібране на волокна після багатогодинного копчення." },
+  { "id": "pork-pulled", "category": "SWAGER's Special", "name": "Лопатка / Рвана свинина", "tags": ["weekend"], "price": 69, "unit": "100 г", "image": "./assets/img/products/pork-pulled.jpg", "description": "Свинний бріскет або pulled pork — томиться годинами, розбирається руками." },
+  { "id": "pork-belly", "category": "SWAGER's Special", "name": "Підчеревина SWAGER'Шпондер", "price": 59, "unit": "100 г", "image": "./assets/img/products/pork-belly.jpg", "description": "Pork belly у всій красі. Жирна прошарована підчеревина, закопчена до золотистої скоринки." },
 
   { "id": "shurpa", "category": "Від Влодка", "name": "Шурпа від Влодка", "tags": ["weekend"], "price": 199, "unit": "порція 300 мл", "image": "./assets/img/products/shurpa.jpg", "description": "Страва вікенду — тільки під замовлення. Насичений бульйон, м'ясо, коренеплоди та авторські спеції." },
   { "id": "fish-weekend", "category": "Від Влодка", "name": "Special Weekend fish", "price": 77, "unit": "100 г", "image": "./assets/img/products/fish-weekend.jpg", "description": "Форель і лосось великими кусками — скандинавський стиль. Тільки пʼятниця-субота, під замовлення." },
@@ -45,5 +45,5 @@
   { "id": "spices-pack", "category": "Up and go", "name": "Авторські спеції — пакет", "price": 150, "unit": "пакет 100 г", "image": "./assets/img/products/spices-pack.jpg", "description": "SWAGER'S × Дім Прянощів. Маринад для щоденного використання вдома." },
   { "id": "you-can-sweet", "category": "SWAGER'S You can...", "name": "Sweet", "price": 120, "unit": "від 250 мл", "image": "./assets/img/products/you-can-sweet.jpg", "description": "Biskoff Biscuit, Texas Tiramisu, Swager's Musse та інші десерти в банках." },
   { "id": "you-can-drink", "category": "SWAGER'S You can...", "name": "Drink", "price": 90, "unit": "від 250 мл", "image": "./assets/img/products/you-can-drink.jpg", "description": "Крафтові вітамінні чаї та морси у закатаних банках, 4–6 сезонних позицій." },
-  { "id": "you-can-soup", "category": "SWAGER'S You can...", "name": "Soup", "price": 125, "unit": "від 250 мл", "image": "./assets/img/products/you-can-soup.jpg", "description": "Щоденні свіжоприготовані авторські салати та супи у зручних банках." }
+  { "id": "you-can-soup", "category": "SWAGER'S You can...", "name": "Soup/Salad", "price": 125, "unit": "від 250 мл", "image": "./assets/img/products/you-can-soup.jpg", "description": "Щоденні свіжоприготовані авторські салати та супи у зручних банках." }
 ]
