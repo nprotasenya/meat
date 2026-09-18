@@ -3,6 +3,8 @@ import { Cart } from './core/Cart.js';
 import { LocalStorageCartStorage } from './core/CartStorage.js';
 import { ProductService } from './services/ProductService.js';
 import { OrderService } from './services/OrderService.js';
+import { ScrollToTopView } from './ui/ScrollToTopView.js';
+import { CategoryNavigationView } from './ui/CategoryNavigationView.js';
 import { ProductListView } from './ui/ProductListView.js';
 import { CartModalView } from './ui/CartModalView.js';
 import { CartBadgeView } from './ui/CartBadgeView.js';
@@ -18,9 +20,20 @@ class App {
     this.cart = new Cart(new LocalStorageCartStorage(CONFIG.CART_STORAGE_KEY));
     this.orderService = new OrderService(CONFIG.ORDER_API_URL);
 
+    this.categoryNavigationView = new CategoryNavigationView(
+      document.querySelector('#category-nav'),
+      (categoryId) => this.#scrollToCategory(categoryId)
+    );
+
     this.productListView = new ProductListView(
       document.querySelector('#product-list'),
       (productId) => this.#handleAddToCart(productId)
+    );
+
+    this.scrollToTopView = new ScrollToTopView(
+      document.querySelector('#top-button'),
+      document.querySelector('#category-nav'),
+      () => this.#scrollToTop() 
     );
 
     this.cartBadgeView = new CartBadgeView(document.querySelector('#cart-count'));
@@ -51,9 +64,11 @@ class App {
   async init() {
     try {
       this.products = await this.productService.getAll();
+      this.categoryNavigationView.render(this.products);
       this.productListView.render(this.products, CONFIG.CURRENCY);
       this.cartModalView.renderItems(this.cart.getItems(), CONFIG.CURRENCY);
       this.cartBadgeView.update(this.cart.getCount());
+      this.scrollToTopView.init();
     } catch (err) {
       console.error(err);
       document.querySelector('#product-list').innerHTML =
@@ -64,6 +79,16 @@ class App {
   #handleAddToCart(productId) {
     const product = this.products.find((p) => p.id === productId);
     if (product) this.cart.add(product);
+  }
+
+  #scrollToCategory(categoryId) {
+    const category = document.querySelector('#' + categoryId + '-category');
+    if (category) category.scrollIntoView({behavior:"smooth", block:"start"});  
+  }
+
+  // Button function.
+  #scrollToTop() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
   }
 
   async #handleOrderSubmit(customer) {

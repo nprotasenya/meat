@@ -23,6 +23,9 @@
       </button>
     </div>
   </header>
+  <button id="top-button" class="back_to_top">
+    <img class="back_to_top_icon" src="./assets/img/topArrow.png"/>
+  </button> 
   <div class="browser-wide-img">
     <img src="/assets/img/hero-head.png"/>
   </div>
@@ -33,6 +36,10 @@
       <h1>Крафтові копченості &amp; справжній Low and Slow BBQ</h1>
       <h2>Ми не просто готуємо м'ясо — ми творимо ритуал.</h2>
       <h2>Кожен шматок проходить через дим, час і майстерність.</h2>
+    </section>
+
+    <section id="category-nav" class="navigation-hor" aria-live="polite">
+      <!-- рендериться JS-ом -->
     </section>
 
     <section id="product-list" aria-live="polite">
@@ -63,7 +70,7 @@
         </div>
 
         <form id="order-form" class="order-form">
-          <input class="order-fhttp://localhost:3000orm__input" type="text" name="name" placeholder="Ваше імʼя" required>
+          <input class="order-form__input" type="text" name="name" placeholder="Ваше імʼя" required>
           <input class="order-form__input" type="tel" name="phone" placeholder="Телефон для звʼязку" required>
           <textarea class="order-form__input" name="comment" placeholder="Коментар (необовʼязково)" rows="2"></textarea>
           <button id="submit-order" type="submit" class="btn btn--primary btn--block" disabled>

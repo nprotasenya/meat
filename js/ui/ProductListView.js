@@ -24,10 +24,9 @@ export class ProductListView {
     this.container.innerHTML = Object.entries(groups)
       .map(
         ([category, items]) => `
-        <section class="category-section">
+        <section id="${category.replace(/'/g, '').replace(/ /g, '-').replace(/\./g, '')}-category" class="category-section">
           <div class="category-section__title-with-background">
             <h2 class="category-section__title">${category}</h2>
-            <div class="${category}-bg"></div>
           </div>
           <div class="product-grid">
             ${items.map((p) => this.#renderCard(p, currency)).join('')}
